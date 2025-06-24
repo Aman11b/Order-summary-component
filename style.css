@@ -145,6 +145,11 @@ body {
   line-height: 1.6;
   color: var(--clr-neutral-400);
   background-color: var(--clr-primary-200);
+
+  /* for demo */
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
 }
 
 h1,
@@ -157,6 +162,67 @@ h2 {
   font-size: var(--fs-700);
   color: var(--clr-neutral-800);
 }
+
+/* composition -> how layout will look like*/
+
+.grid-flow{
+  display: grid;
+  gap: 1rem;
+}
+
+/* .flow > * + * {
+  selecting every direct child except the first one
+  every sibling whihc has a sibling before
+  margin-top: var(--flow-spacer,1em);
+  border: 1px solid red;
+} */
+
+/* .flow > :not(:first-child){
+  margin-top: 1em;
+  border: 1px solid red;
+  same as above
+} */
+
+/* utility classes -> utility based tools*/
+.padding-24{
+  padding: 1.5rem;
+}
+.padding-48{
+  padding: 3rem;
+  /* 3*16=48 */
+}
+
+.text-neutral-800{
+  color: var(--clr-neutral-800);
+}
+.text-neutral-400{
+  color: var(--clr-neutral-400);
+}
+
+.bg-neutral-100{
+  background-color: var(--clr-neutral-100);
+}
+.bg-neutral-200{
+  background-color: var(--clr-neutral-200);
+}
+
+.text-align-left{
+  text-align: start;
+}
+.text-align-center{
+  text-align: center;
+}
+.text-align-right{
+  text-align: right;
+
+}
+
+/* block */
+.card{
+  max-width: 450px;
+}
+
+
 
 @media screen and (max-width: 35em) {
 }
