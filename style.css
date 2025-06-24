@@ -1,0 +1,140 @@
+/* custom porperties */
+:root{
+    --clr-neutral-100:hsl(0 0% 100%);
+    --clr-neutral-200:hsl(225, 100%, 98%);
+    --clr-neutral-400:hsla(223, 23%, 55%, 1);
+    --clr-neutral-800:hsl(223, 47%, 23%);
+
+    --clr-primary-200:hsl(225, 100%, 94%);
+    --clr-primary-300:hsla(245, 83%, 68%, 1);
+    --clr-primary-400:hsl(245, 75%, 52%);
+
+    --fs-700:1.75rem;
+    --fs-400:1rem;
+    --fs-300:0.875rem;
+
+    --fw-400:400;
+    --fw-700:700;
+    --fw-900:900
+}
+
+
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+body,
+h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  font-family: inherit;
+}
+
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+ outline: 2px solid #007bff;
+}
+
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+.sr-only{
+ clip-path:inset(100%);
+ clip:rect(0 0 0 0 );
+ height:1px;
+ overflow:hidden;
+ position: absolute;
+ white-space:nowrap;
+ width:1px
+}
+
+/* remove all animation,transition */
+
+@media (prefer-reduced-motion: reduce){
+    html:focus-within{
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+}
+
+@media only screen and (min-width: 764px) and (max-width: 1024px) {
+
+}
