@@ -161,13 +161,18 @@ h3 {
 h2 {
   font-size: var(--fs-700);
   color: var(--clr-neutral-800);
+  font-weight: var(--fw-900);
 }
 
 /* composition -> how layout will look like*/
 
-.grid-flow{
+.grid-flow {
   display: grid;
-  gap: 1rem;
+  gap: var(--gap, 1rem);
+}
+.flex-row {
+  display: flex;
+  gap: var(--gap, 1rem);
 }
 
 /* .flow > * + * {
@@ -184,47 +189,115 @@ h2 {
 } */
 
 /* utility classes -> utility based tools*/
-.padding-24{
+.padding-24 {
   padding: 1.5rem;
 }
-.padding-48{
+.padding-48 {
   padding: 3rem;
   /* 3*16=48 */
 }
 
-.text-neutral-800{
+.text-neutral-800 {
   color: var(--clr-neutral-800);
 }
-.text-neutral-400{
+.text-neutral-400 {
   color: var(--clr-neutral-400);
 }
 
-.bg-neutral-100{
+.bg-neutral-100 {
   background-color: var(--clr-neutral-100);
 }
-.bg-neutral-200{
+.bg-neutral-200 {
   background-color: var(--clr-neutral-200);
 }
 
-.text-align-left{
+.text-align-left {
   text-align: start;
 }
-.text-align-center{
+.text-align-center {
   text-align: center;
 }
-.text-align-right{
+.text-align-right {
   text-align: right;
-
 }
+
+.fw-bold {
+  font-weight: var(--fw-700);
+}
+.fw-black {
+  font-weight: var(--fw-900);
+}
+
+.br-1 {
+  border-radius: 0.5rem;
+}
+.br-2 {
+  border-radius: 1rem;
+}
+.push-right {
+  margin-left: auto;
+}
+
+/* .button:hover,
+.button:focus {
+  background: var(--clr-primary-300);
+} */
 
 /* block */
-.card{
+.card {
   max-width: 450px;
+  overflow: hidden;
+}
+a,
+.link {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  color: var(--clr-primary-400);
+  text-decoration: underline;
+  font-weight: var(--fw-700);
 }
 
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: var(--clr-primary-300);
+  text-decoration: none;
+}
 
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: var(--fw-700);
+  background: transparent;
+  padding: 1em 2em;
+  border: 0;
+}
+
+.button[data-type="primary"] {
+  color: var(--clr-neutral-100);
+  background: var(--clr-primary-400);
+}
+.button[data-type="primary"]:focus,
+.button[data-type="primary"]:hover {
+  background: var(--clr-primary-300);
+}
+
+.button[data-type="naked"] {
+  color: var(--clr-neutral-400);
+  padding: 0;
+}
+.button[data-type="naked"]:hover,
+.button[data-type="naked"]:focus {
+  color: var(--clr-neutral-800);
+}
 
 @media screen and (max-width: 35em) {
+  .card {
+    margin: 2rem;
+  }
 }
 
 @media only screen and (min-width: 764px) and (max-width: 1024px) {

@@ -23,29 +23,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="[ card ] [ bg-neutral-100 text-align-center ] ">
+    <div class="[ card ] [ bg-neutral-100 text-align-center br-2 ]">
       <!-- BEM terminology -->
-      <img src="./images/illustration-hero.svg" alt="illustration-hero"
-      class="card__image" />
-      <div class="[ card__content grid-flow ] [ padding-48 ]">
+      <img
+        src="./images/illustration-hero.svg"
+        alt="illustration-hero"
+        class="card__image"
+      />
+      <div class="[ card__content ][ grid-flow ] [ padding-48 ]">
         <h2>Order Summary</h2>
         <p>
           You can now listen to millions of songs, audiobooks, and podcasts on
           any device anywhere you like!
         </p>
-        <div class="[ bg-neutral-200 text-align-left ]">
+        <div
+          class="[ flex-row ][ bg-neutral-200 text-align-left br-1 padding-24 ]"
+        >
           <div>
             <img src="./images/icon-music.svg" alt="" />
             <!-- decoration element alt empty -->
           </div>
           <div>
-            <p>Annual Plan</p>
+            <p class="[ text-neutral-800 fw-black ]">Annual Plan</p>
             <p>$59.99/year</p>
           </div>
-          <button>Change</button>
+          <button class="[ link ] [ push-right ]">Change</button>
         </div>
-        <button>Proceed to Payment</button>
-        <button>Cancel Order</button>
+        <button class="button" data-type="primary">Proceed to Payment</button>
+        <button class="button" data-type="naked">Cancel Order</button>
       </div>
     </div>
   </body>
